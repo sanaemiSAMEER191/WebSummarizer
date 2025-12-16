@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSummarizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌐 WebSummarizer</h1>
+    <p>AI-powered web scraping & summarization tool</p>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter webpage URL" required>
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if summary %}
+    <div class="result">
+        <h2>📌 Summary</h2>
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>
